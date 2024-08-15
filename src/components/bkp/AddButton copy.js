@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useForm } from "react-hook-form";
 
 const AddButton = ({ section }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -54,19 +55,26 @@ const AddButton = ({ section }) => {
           <>
             <input
               type="text"
-              name="name"
-              value={formData.name || ''}
+              name="displayMPN"
+              value={formData.displayMPN || ''}
               onChange={handleInputChange}
               placeholder="Enter product name"
-              className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-              required
+              className="mt-3 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
             />
             <input
-              type="number"
-              name="price"
-              value={formData.price || ''}
+              type="text"
+              name="sku"
+              value={formData.sku || ''}
               onChange={handleInputChange}
-              placeholder="Enter product price"
+              placeholder="Enter SKU"
+              className="mt-3 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            />
+            <input
+              type="text"
+              name="mpn"
+              value={formData.mpn || ''}
+              onChange={handleInputChange}
+              placeholder="Enter MPN"
               className="mt-3 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
             />
           </>

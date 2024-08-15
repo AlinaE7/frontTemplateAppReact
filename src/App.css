@@ -43,3 +43,12 @@
   padding-top: 1.5rem;
 }
 
+/*Appearing Trashcan icon*/
+.trashed-item:hover .trash-button {
+  opacity: 1;
+}
+
+/*Appearing Trashcan icon*/
+.edited-item:hover .edit-button {
+  opacity: 1;
+}
